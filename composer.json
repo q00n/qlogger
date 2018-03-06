@@ -1,0 +1,40 @@
+{
+    "name": "q00n/qlogger",
+    "type": "library",
+    "description": "Simple logger",
+    "keywords": [
+        "q00n",
+        "qlogger"
+    ],
+    "homepage": "https://github.com/q00n/qlogger",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "q00n",
+            "email": "mrkeksikable@gmail.com",
+            "homepage": "https://github.com/q00n",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Q00n\\QLogger\\": "src"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        },
+        "laravel": {
+            "providers": [
+                "Q00n\\QLogger\\QLoggerServiceProvider"
+            ],
+            "aliases": {
+                "QLogger": "Q00n\\QLogger\\QLoggerFacade"
+            }
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
