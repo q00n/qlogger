@@ -5,7 +5,7 @@ use Q00n\QLogger\LogReader;
 Route::get('qlogger/removeExpired', function (LogReader $logReader) {
     $logReader->removeExpired();
     return redirect()->back();
-})->where(['date' => '(0[1-9]|[12]\d|3[01])-(0[1-9]|1[0-2])-([12]\d{3})']);
+});
 
 Route::get('qlogger/remove/{date?}', function ($date = null, LogReader $logReader) {
     $logReader->removeLog($date);
