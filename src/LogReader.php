@@ -22,9 +22,10 @@ class LogReader
 
     public function getLogFileList(string $date = null)
     {
-        if (!empty($date) && !file_exists($this->getFullPath($date.$this->logExtension)))
+        if (!file_exists($this->logDirectory))
             return [];
-        elseif (!empty($date))
+
+        if (!empty($date) && file_exists($this->getFullPath($date.$this->logExtension)))
             return [$date.$this->logExtension];
 
         return array_slice(scandir($this->logDirectory), 2);
