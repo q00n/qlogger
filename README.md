@@ -32,7 +32,7 @@ QLogger::save($data, 'Input Data');
 
 To read/erase/remove logs visit /qlogger page. There you will have a pleasent, intuitive interface.
 
-## Avaible methods
+## Available methods
 
 ``` php
 QLogger::save($data[, $mark]); // save passed data with 'NOTICE' level of importance
